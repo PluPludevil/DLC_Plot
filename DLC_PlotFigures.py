@@ -3,9 +3,13 @@ import math
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# 表示するフレーム区間を指定する定数
+FIRST_FRAME = 0 # Default : 0
+LAST_FRAME = None # Default : None(Noneの場合は、FIRST_FRAME以降の全てのフレームを表示する)
+
 # trajectoryの表示範囲設定用定数
 WIDTH_SIZE_MIN = 700  # Default : 0
-WIDTH_SIZE_MAX = 1100  # Default : 1920
+WIDTH_SIZE_MAX = 1050  # Default : 1920
 HEIGHT_SIZE_MIN = 650  # Default : 1080
 HEIGHT_SIZE_MAX = 150  # Default : 0
 
@@ -94,7 +98,7 @@ body_parts.remove('bodyparts')  # ラベル名じゃないから削除(df_read�
 
 # 各ラベル毎に処理
 for body_part in body_parts:
-    df = df_read.loc[:, body_part]  # 各ラベルのデータ毎にデータフレームを作成
+    df = df_read.loc[FIRST_FRAME:LAST_FRAME, body_part]  # 各ラベル毎にデータフレームを作成
     if (body_part == LABEL1):  # 1px当たりの長さ計算用にグローバル変数(dataframe)に渡す
         df_label1_x = df.loc[:, 'x']
         df_label1_y = df.loc[:, 'y']
