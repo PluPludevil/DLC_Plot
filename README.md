@@ -1,5 +1,5 @@
 # DLC_Plot
- Python code for DeepLabCut's data plotting graph
+DeepLabCutで出力したcsvファイルをグラフにして保存するための自作Pythonコード
 ## 目次
 - 作成環境
 - 概要
@@ -13,7 +13,7 @@
         - Pythonコードの説明を表示
 
 ## 作成環境
-MacBook Air
+**MacBook Air**
 - macOS：Ventura13.5
 - Python 3.9.6
 - Visual Studio Code：Version: 1.89.0 (Universal)
@@ -67,7 +67,7 @@ DLCで出力されたcsvデータを読み込んでグラフを作成するPytho
 
 ### Tips
 #### ファイルのパス名取得法(mac)
-ファイルを右クリック→「option」キーを押すとパス名をコピーする項目が出る
+- ファイルを右クリック→「option」キーを押すとパス名をコピーする項目が出る
 
 #### Pythonコードの説明を表示
 以下のコマンドをターミナルで実行(ファイル名に.pyは不要)
